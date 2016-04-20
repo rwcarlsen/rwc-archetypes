@@ -155,8 +155,8 @@ std::map<int, double> LookInst::RunSim(SqliteBack* b, int deploy_t) {
     int t = TimeOf(period);
     for (int i = 0; i < nbuild.size(); i++) {
       for (int k = 0; k < nbuild[i]; k++) {
-        // if we use 'this' as parent, then this will be owned and deallocated
-        // by multiple conterxts - BAD
+        // if we use 'this' as parent, then this agent instance will be owned
+        // and deallocated by multiple conterxts - BAD
         // TODO: figure out a way to not have to use NULL for parent here.
         si.context()->SchedBuild(NULL, proto_priority[i], t);
       }

@@ -17,7 +17,7 @@ struct Short {
 
 /// The LookInst automatically deploys facilities in an attempt to efficiently
 /// supply a user-specified demand curve.  Although demand can be set to
-/// anything by the user, electrical power/energy production is a more common
+/// anything by the user, electrical power/energy production is a common
 /// usage.  The user specifies one or more prototypes that can be deployed in
 /// order to satisfy demand in a priority order.  The LookInst makes deployment
 /// decisions by running mini-simulations initialized by cloning the current
@@ -51,11 +51,11 @@ struct Short {
 ///   least common multiple for better staggering on average.  For example,
 ///   make a reactor cycle (including refueling time) be something like 19 if
 ///   the deploy period is 12 months - if reactors are deployed annually, you
-///   get 19 separate deployments before reactor cycles start to overlap.
+///   get 19 separate deployment periods before reactor cycles start to overlap.
 ///
 /// - eliminate offline periods (with no production of e.g. power) effectively
-///   increasing capacity factor to 100% and compensate by reducting production
-///   capacity time unit accordingly.  For example, reduce reactor power capacity
+///   increasing capacity factor to 100% and compensate by reducing production
+///   capacity accordingly.  For example, reduce reactor power capacity
 ///   to 900 MWe from 1000 MWe and reduce refueling time in the 20 month cycle
 ///   from 2 months to 0 months.
 class LookInst : public cyclus::Institution {
