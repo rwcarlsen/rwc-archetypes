@@ -1,5 +1,5 @@
 #src = $(filter-out %.gen.cc,$(wildcard *.cc))
-src = storage.cc fleet_reactor.cc #pattern_sink.cc # look_inst.cc
+src = storage.cc fleet_reactor.cc pattern_sink.cc # look_inst.cc
 $(info "src: $(src)")
 libname=librwc.so
 
@@ -22,12 +22,10 @@ CXXFLAGS += "-std=c++11"
 ##### dependency config #####
 includes += -I$(HOME)/.local/include
 includes += -I$(CYCLUS_ROOT)/include/cyclus
-includes += -I/opt/local/include/
 
 libs += -L$(CYCLUS_ROOT)/lib
 libs += -L$(HOME)/.local/lib
 libs += -lcyclus
-libs += -L/opt/local/lib/
 
 ##### variable setup #####
 version = $(shell git describe --tags --always)
