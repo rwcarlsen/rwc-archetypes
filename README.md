@@ -2,7 +2,7 @@
 Supplemental Cyclus Archetypes
 ===============================
 
-Run ``make install`` to build and install these archetypes into
+Run ``python install.py`` to build and install these archetypes into
 ``.local/lib/cyclus`` which will need to be in your CYCLUS_PATH environment
 variable.  The archetypes are built into a single library named ``rwc``.
 Included archetypes are:
